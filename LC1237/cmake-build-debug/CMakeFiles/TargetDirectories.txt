@@ -1,0 +1,3 @@
+/Users/fahim.admin/CLionProjects/LC1237/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/fahim.admin/CLionProjects/LC1237/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fahim.admin/CLionProjects/LC1237/cmake-build-debug/CMakeFiles/LC1237.dir
