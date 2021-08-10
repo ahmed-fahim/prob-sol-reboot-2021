@@ -8,82 +8,88 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug"/>
+				<Option working_dir="/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug"/>
+				<Option working_dir="/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="MathFunctions">
-				<Option output="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/MathFunctions.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 MathFunctions"/>
-					<CompileFile command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="MathFunctions/fast">
-				<Option output="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/MathFunctions.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/x86_64-pc-cygwin"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include/c++/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/include"/>
-					<Add directory="/usr/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-cygwin/9.3.0/../../../../lib/../include/w32api"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 MathFunctions/fast"/>
-					<CompileFile command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug"/>
+				<Option working_dir="/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/cygwin64/bin/make.exe -j12 -f &quot;/cygdrive/f/Works/1.\ Self\ Development/Core\ Programming/Problem\ Solving\ Phase\ 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MathFunctions">
+				<Option output="/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/MathFunctions" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 MathFunctions"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MathFunctions/fast">
+				<Option output="/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/MathFunctions" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 MathFunctions/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/main.cpp">
+		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.cpp">
 			<Option target="MathFunctions"/>
 		</Unit>
-		<Unit filename="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/CMakeLists.txt">
+		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.h">
+			<Option target="MathFunctions"/>
+		</Unit>
+		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/main.cpp">
+			<Option target="MathFunctions"/>
+		</Unit>
+		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

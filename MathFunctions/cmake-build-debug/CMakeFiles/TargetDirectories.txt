@@ -1,3 +1,3 @@
-/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles/MathFunctions.dir
-/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles/MathFunctions.dir

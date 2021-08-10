@@ -4,9 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/main.cpp" "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles/MathFunctions.dir/main.cpp.o"
+  "/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.cpp" "/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o"
+  "/Users/fahim.admin/CLionProjects/MathFunctions/main.cpp" "/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles/MathFunctions.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

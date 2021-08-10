@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o"
   "CMakeFiles/MathFunctions.dir/main.cpp.o"
-  "MathFunctions.exe"
+  "MathFunctions"
   "MathFunctions.pdb"
-  "libMathFunctions.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

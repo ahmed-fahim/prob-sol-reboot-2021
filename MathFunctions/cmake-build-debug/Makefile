@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Fahim/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Fahim/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions"
+CMAKE_SOURCE_DIR = /Users/fahim.admin/CLionProjects/MathFunctions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/cygdrive/f/Works/1. Self Development/Core Programming/Probl
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/cygdrive/c/Users/Fahim/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/cygdrive/c/Users/Fahim/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe -E echo No\ interactive\ CMake\ dialog\ available.
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles" "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ MathFunctions/fast:
 	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/build
 .PHONY : MathFunctions/fast
 
+MathLibrary.o: MathLibrary.cpp.o
+
+.PHONY : MathLibrary.o
+
+# target to build an object file
+MathLibrary.cpp.o:
+	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o
+.PHONY : MathLibrary.cpp.o
+
+MathLibrary.i: MathLibrary.cpp.i
+
+.PHONY : MathLibrary.i
+
+# target to preprocess a source file
+MathLibrary.cpp.i:
+	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/MathLibrary.cpp.i
+.PHONY : MathLibrary.cpp.i
+
+MathLibrary.s: MathLibrary.cpp.s
+
+.PHONY : MathLibrary.s
+
+# target to generate assembly for a file
+MathLibrary.cpp.s:
+	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/MathLibrary.cpp.s
+.PHONY : MathLibrary.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -157,8 +184,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... MathFunctions"
 	@echo "... edit_cache"
+	@echo "... MathFunctions"
+	@echo "... MathLibrary.o"
+	@echo "... MathLibrary.i"
+	@echo "... MathLibrary.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

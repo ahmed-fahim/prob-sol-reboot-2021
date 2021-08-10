@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/main.cpp
+/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.h
 bits/stdc++.h
 -
+
+/Users/fahim.admin/CLionProjects/MathFunctions/main.cpp
+bits/stdc++.h
+-
+MathLibrary.h
+/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.h
 

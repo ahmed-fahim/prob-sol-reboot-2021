@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/Fahim/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/Fahim/.CLion2019.3/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions"
+CMAKE_SOURCE_DIR = /Users/fahim.admin/CLionProjects/MathFunctions
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MathFunctions.dir/depend.make
@@ -59,32 +59,47 @@ include CMakeFiles/MathFunctions.dir/flags.make
 
 CMakeFiles/MathFunctions.dir/main.cpp.o: CMakeFiles/MathFunctions.dir/flags.make
 CMakeFiles/MathFunctions.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MathFunctions.dir/main.cpp.o"
-	C:/cygwin64/bin/g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MathFunctions.dir/main.cpp.o -c "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MathFunctions.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MathFunctions.dir/main.cpp.o -c /Users/fahim.admin/CLionProjects/MathFunctions/main.cpp
 
 CMakeFiles/MathFunctions.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MathFunctions.dir/main.cpp.i"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/main.cpp" > CMakeFiles/MathFunctions.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/fahim.admin/CLionProjects/MathFunctions/main.cpp > CMakeFiles/MathFunctions.dir/main.cpp.i
 
 CMakeFiles/MathFunctions.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MathFunctions.dir/main.cpp.s"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/main.cpp" -o CMakeFiles/MathFunctions.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/fahim.admin/CLionProjects/MathFunctions/main.cpp -o CMakeFiles/MathFunctions.dir/main.cpp.s
+
+CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o: CMakeFiles/MathFunctions.dir/flags.make
+CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o: ../MathLibrary.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o -c /Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.cpp
+
+CMakeFiles/MathFunctions.dir/MathLibrary.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MathFunctions.dir/MathLibrary.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.cpp > CMakeFiles/MathFunctions.dir/MathLibrary.cpp.i
+
+CMakeFiles/MathFunctions.dir/MathLibrary.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MathFunctions.dir/MathLibrary.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.cpp -o CMakeFiles/MathFunctions.dir/MathLibrary.cpp.s
 
 # Object files for target MathFunctions
 MathFunctions_OBJECTS = \
-"CMakeFiles/MathFunctions.dir/main.cpp.o"
+"CMakeFiles/MathFunctions.dir/main.cpp.o" \
+"CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o"
 
 # External object files for target MathFunctions
 MathFunctions_EXTERNAL_OBJECTS =
 
-MathFunctions.exe: CMakeFiles/MathFunctions.dir/main.cpp.o
-MathFunctions.exe: CMakeFiles/MathFunctions.dir/build.make
-MathFunctions.exe: CMakeFiles/MathFunctions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MathFunctions.exe"
+MathFunctions: CMakeFiles/MathFunctions.dir/main.cpp.o
+MathFunctions: CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o
+MathFunctions: CMakeFiles/MathFunctions.dir/build.make
+MathFunctions: CMakeFiles/MathFunctions.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MathFunctions"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MathFunctions.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/MathFunctions.dir/build: MathFunctions.exe
+CMakeFiles/MathFunctions.dir/build: MathFunctions
 
 .PHONY : CMakeFiles/MathFunctions.dir/build
 
@@ -93,6 +108,6 @@ CMakeFiles/MathFunctions.dir/clean:
 .PHONY : CMakeFiles/MathFunctions.dir/clean
 
 CMakeFiles/MathFunctions.dir/depend:
-	cd "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions" "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions" "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug" "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug" "/cygdrive/f/Works/1. Self Development/Core Programming/Problem Solving Phase 2020/prob-sol-reboot-2021/prob-sol-reboot-2021/MathFunctions/cmake-build-debug/CMakeFiles/MathFunctions.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/fahim.admin/CLionProjects/MathFunctions /Users/fahim.admin/CLionProjects/MathFunctions /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug /Users/fahim.admin/CLionProjects/MathFunctions/cmake-build-debug/CMakeFiles/MathFunctions.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/MathFunctions.dir/depend
 
