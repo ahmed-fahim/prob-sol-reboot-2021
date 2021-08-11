@@ -1,0 +1,353 @@
+//
+// Created by fahim.admin on 10/8/21.
+//
+
+#ifndef MATHFUNCTIONS_MATHLIBRARY_
+#define MATHFUNCTIONS_MATHLIBRARY_
+//******************************************** Declarations ********************************************//
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define TMP(T) template <typename T>
+#define TMP2(T1, T2) template <typename T1, typename T2>
+
+TMP(T)
+T gcd(T a, T b);
+
+TMP(T)
+T extendedGcd(T a, T b, T &x, T &y);
+
+TMP(T)
+T lcm(T a, T b);
+
+TMP(T)
+pair<T, T> getOriginatorPair(T gcdVal, T lcmVal);
+
+TMP(T)
+bool isPrime(T n);
+
+vector<int> &sieve(const int &N, vector<int> &primes);
+
+vector<long long> &segmentedSieve(long long segmentStart,
+                                  long long segmentEnd,
+                                  vector<long long> &segmentedPrimes);
+
+void divisorSummatoryFunction(int N);
+
+template<typename T>
+T modularAdd(T val, T delta, T mod);
+
+template<typename T>
+T modularDelete(T val, T delta, T mod);
+
+template<typename T>
+T modularProduct(T val, T delta, T mod);
+
+template<typename T>
+T modularDivision(T numerator, T denominator, T mod);
+
+template<typename T>
+T moduloInverse(T denominator, T mod);
+
+template<typename T>
+T powerMod(T val, T power, T mod);
+
+template<typename T>
+T seriesSum(const vector<T>& series);
+//******************************************** Definitions ********************************************//
+
+#define MAX_ALLOCATION_RANGE 100005
+#define pi acos(-1.00)
+#define MOD 10000007
+#define eps 1e-9
+
+vector<int> divisors[MAX_ALLOCATION_RANGE];
+long long sumOfDivisors[MAX_ALLOCATION_RANGE];
+
+bitset<MAX_ALLOCATION_RANGE> compositeStatus(0x00);
+bitset<MAX_ALLOCATION_RANGE> segmentCompositeStatus(0x00);
+
+TMP(T)
+T gcd(T a, T b) {
+	while (b) {
+		a = a % b;
+		swap(a, b);
+	}
+	return a;
+}
+
+TMP(T)
+T extendedGcd(T a, T b, T &x, T &y) {
+	bool swappedArguments = false;
+	//Making sure a > b
+	if (a < b) {
+		swap(a, b);
+		swappedArguments = true;
+	}
+
+	//Checking base case
+	if (b == 0) {
+		x = 1;
+		y = 0;
+		return a;
+	}
+
+	int q = a / b; //quotient
+	int r = a % b; //remainder
+	int x1, y1;
+	int gcdValue = extendedGcd(b, r, x1, y1);
+	/**
+	 * a1 = b
+	 * b1 = r = a%b = a - (a/b)*b
+	 *
+	 * ax + by = gcd(a,b)
+	 * a1x1 + b1y1 = gcd(a,b)
+	 *
+	 * plugging in value for a1,b1
+	 * ax+by = bx1 + {(a-(a/b)*b}*y1 = bx1 + ay1 - b*(a/b)*y1
+	 * ax+by = ay1 + b*{x1 - (a/b)*y1}
+	 *
+	 * Comparing LeftHandSide to RightHandSide
+	 * x = y1
+	 * y = x1 - (a/b)*y1
+	**/
+	x = y1;
+	y = x1 - q * y1;
+	if (swappedArguments) swap(x, y);
+	return gcdValue;
+}
+
+TMP(T)
+T lcm(T a, T b) {
+	return a * (b / gcd(a, b));
+}
+
+TMP(T)
+pair<T, T> getOriginatorPair(T gcdVal, T lcmVal) {
+	return (lcmVal % gcdVal == 0) ? make_pair(lcmVal, gcdVal) : make_pair(-1, -1);
+}
+
+TMP(T)
+bool isPrime(T n) {
+	int sq = sqrt(n);
+	for (int dividend = 2; dividend <= sq; dividend++) {
+		if (n % div == 0) {
+			return false;
+		}
+	}
+	return true;
+}
+
+vector<int> &sieve(const int &N, vector<int> &primes) {
+	primes.clear();
+
+	compositeStatus.set(0);
+	compositeStatus.set(1);
+	primes.emplace_back(2);
+
+	for (int value = 4; value <= N; value += 2) compositeStatus.set(value);
+
+	int sq = sqrt(N);
+	for (int value = 3; value <= sq; value += 2) {
+		if (!compositeStatus.test(value)) {
+			primes.emplace_back(value);
+
+			for (int multiple = value * value; multiple <= N; multiple += 2 * value) {
+				compositeStatus.set(multiple);
+			}
+		}
+	}
+
+	//we iterate only on the odds that are > sq(N)
+	if (sq % 2 == 1) sq++;
+
+	for (int value = sq + 1; value <= N; value += 2) {
+		if (!compositeStatus.test(value)) {
+			primes.emplace_back(value);
+		}
+	}
+	return primes;
+}
+
+long long leastCompositeMultipleInSegment(long long prime, long long segmentStart) {
+	long long q = segmentStart / prime;
+	long long multiple = q * prime;
+	if (multiple < segmentStart) multiple += prime;
+	return (multiple == prime) ? multiple + prime : multiple;
+}
+
+
+#define indexInSegment(value, segmentStart) (value-segmentStart)
+
+vector<long long> &segmentedSieve(long long segmentStart,
+                                  long long segmentEnd,
+                                  vector<long long> &segmentedPrimes) {
+	segmentedPrimes.clear();
+	if (segmentStart <= 1) segmentStart = 2;
+
+	int sq = sqrt(segmentEnd); //divisorOf N <= sqrt(N)
+
+	vector<int> primes;
+	primes = sieve(sq, primes);
+
+	for (auto &prime : primes) {
+		auto multiple = leastCompositeMultipleInSegment(prime, segmentStart);
+		while (multiple <= segmentEnd) {
+			segmentCompositeStatus.set(indexInSegment(multiple, segmentStart));
+			multiple += prime;
+		}
+	}
+
+	for (long long value = segmentStart; value <= segmentEnd; value++) {
+		if (!segmentCompositeStatus.test(indexInSegment(value, segmentStart))) {
+			segmentedPrimes.emplace_back(value);
+		}
+	}
+
+	return segmentedPrimes;
+}
+
+void divisorSummatoryFunction(int N) {
+
+	int sq = sqrt(N);
+	for (int divisor = 1; divisor <= sq; divisor++) {
+		for (int multiple = divisor; multiple <= N; multiple += divisor) {
+			if (divisors[multiple].empty()) {
+				sumOfDivisors[multiple] = divisor;
+			} else {
+				sumOfDivisors[multiple] += divisor;
+			}
+
+			divisors[multiple].emplace_back(divisor);
+
+			int divisor2 = multiple / divisor;
+			//collecting the divisors within range [sqrt(n), n]
+			if (divisor2 > sq) {
+				divisors[multiple].emplace_back(divisor2);
+				sumOfDivisors[multiple] += divisor2;
+			}
+		}
+	}
+}
+
+TMP(T)
+T modularAdd(T val, T delta, T mod) {
+	return (val % mod + delta % mod) % mod;
+}
+
+TMP(T)
+T modularDelete(T val, T delta, T mod) {
+	T result = (val % mod - delta % mod) % mod;
+	return (result < 0) ? result + mod : result;
+}
+
+TMP(T)
+T modularProduct(T val, T delta, T mod) {
+	return (val % mod * delta % mod) % mod;
+}
+
+TMP(T)
+T modularDivision(T numerator, T denominator, T mod) {
+	return modularProduct(numerator, moduloInverse(denominator, mod), mod);
+}
+
+TMP(T)
+T moduloInverse(T denominator, T mod) {
+	T coEfficientOfMod;
+	T coEfficientOfDelta;
+	T gcdVal = extendedGcd<T>(mod, denominator, coEfficientOfMod, coEfficientOfDelta);
+	if (gcdVal != 1) {
+		stringstream errorMessage;
+		errorMessage << "Provided value " << denominator << " and mod " << mod << " aren't co-primes" << endl;
+		throw invalid_argument(errorMessage.str());
+	}
+	return (coEfficientOfDelta < 0) ? coEfficientOfDelta + mod : coEfficientOfDelta;
+}
+
+TMP(T)
+T powerMod(T val, T power, T mod) {
+	if (power == 0) {
+		return 1LL % mod;
+	}
+	if (power == 1) {
+		return val % mod;
+	}
+	bool isPowerOdd = power % 2;
+	T halfOfPower = power / 2;
+
+	T powerModOfHalf = powerMod(val, halfOfPower, mod);
+
+	T powerModResult = modularProduct(powerModOfHalf, powerModOfHalf, mod);
+	if (isPowerOdd) {
+		powerModResult = modularProduct(powerModResult, val, mod);
+	}
+	return powerModResult;
+}
+
+TMP(T)
+T seriesSum(const vector<T>& series) {
+	if (series.size() <= 2) {
+		T sum = 0;
+		for(const auto& element : series) {
+			sum += element;
+		}
+		return sum;
+	}
+
+	auto isArithmeticProgression = [&series]() {
+		return series[2] - series[1] == series[1] - series[0];
+	};
+
+	auto isGeometricProgression = [&series]() {
+		for (int i = 0; i < 3; i++) {
+			if ((double) series[i] == 0.00) {
+				throw invalid_argument("Geometric Progression can never include 0\n");
+			}
+		}
+		return ((double) series[2] / series[1]) == ((double) series[1] / series[0]);
+	};
+
+	auto sumOfArithmeticSeries = [&series]() {
+		T firstElement = series[0];
+		T commonDifference = series[1] - series[0];
+		T numberOfElements = series.size();
+
+		//formula : sum = (n/2) * (2*a + (n-1)*d)
+		T sum = numberOfElements * (2 * firstElement + (numberOfElements - 1) * commonDifference);
+		return sum / 2;
+	};
+
+	auto sumOfGeometricSeries = [&series]() {
+		auto firstElement = (double)series[0];
+		auto commonRatio = (double)series[1] / (double)series[0];
+		auto numberOfElements = (double) series.size();
+
+		double numerator;
+		double denominator;
+
+		if (commonRatio >= (double) 1.0) {
+			//formula : sum = a * (r^n - 1)/(r-1)
+			numerator = firstElement * (pow(commonRatio, numberOfElements) - 1.00);
+			denominator = commonRatio - 1.00;
+		} else {
+			//formula : sum = a * (1 - r^n)/(1-r)
+			numerator = firstElement * (1.00 - pow(commonRatio, numberOfElements));
+			denominator = 1.00 - commonRatio;
+		}
+
+		return (T)(numerator / denominator);
+	};
+
+	if(isArithmeticProgression()) {
+		return sumOfArithmeticSeries();
+	}
+	else if(isGeometricProgression()) {
+		return sumOfGeometricSeries();
+	}
+	return 0;
+}
+
+
+#endif //MATHFUNCTIONS_MATHLIBRARY_

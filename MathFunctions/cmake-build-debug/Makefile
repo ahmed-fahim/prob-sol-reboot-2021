@@ -123,33 +123,6 @@ MathFunctions/fast:
 	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/build
 .PHONY : MathFunctions/fast
 
-MathLibrary.o: MathLibrary.cpp.o
-
-.PHONY : MathLibrary.o
-
-# target to build an object file
-MathLibrary.cpp.o:
-	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o
-.PHONY : MathLibrary.cpp.o
-
-MathLibrary.i: MathLibrary.cpp.i
-
-.PHONY : MathLibrary.i
-
-# target to preprocess a source file
-MathLibrary.cpp.i:
-	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/MathLibrary.cpp.i
-.PHONY : MathLibrary.cpp.i
-
-MathLibrary.s: MathLibrary.cpp.s
-
-.PHONY : MathLibrary.s
-
-# target to generate assembly for a file
-MathLibrary.cpp.s:
-	$(MAKE) -f CMakeFiles/MathFunctions.dir/build.make CMakeFiles/MathFunctions.dir/MathLibrary.cpp.s
-.PHONY : MathLibrary.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,9 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... MathFunctions"
-	@echo "... MathLibrary.o"
-	@echo "... MathLibrary.i"
-	@echo "... MathLibrary.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

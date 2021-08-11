@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.h
+/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary
 bits/stdc++.h
 -
 
 /Users/fahim.admin/CLionProjects/MathFunctions/main.cpp
 bits/stdc++.h
 -
-MathLibrary.h
-/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.h
+MathLibrary
+/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary
 

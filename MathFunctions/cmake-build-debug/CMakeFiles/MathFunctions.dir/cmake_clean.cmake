@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MathFunctions.dir/MathLibrary.cpp.o"
   "CMakeFiles/MathFunctions.dir/main.cpp.o"
   "MathFunctions"
   "MathFunctions.pdb"

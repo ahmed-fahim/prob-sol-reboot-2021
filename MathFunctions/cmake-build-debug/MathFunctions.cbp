@@ -80,10 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.cpp">
-			<Option target="MathFunctions"/>
-		</Unit>
-		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary.h">
+		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/MathLibrary">
 			<Option target="MathFunctions"/>
 		</Unit>
 		<Unit filename="/Users/fahim.admin/CLionProjects/MathFunctions/main.cpp">
