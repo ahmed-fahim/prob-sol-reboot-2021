@@ -5,6 +5,7 @@
 #ifndef MATHFUNCTIONS_MATHLIBRARY_H
 #define MATHFUNCTIONS_MATHLIBRARY_H
 #include <bits/stdc++.h>
+#define MAX_ALLOCATION_RANGE 100005
 
 template<typename T>
 T gcd(T a, T b);

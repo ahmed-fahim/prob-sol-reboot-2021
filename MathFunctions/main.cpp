@@ -6,6 +6,8 @@ using namespace std;
 
 extern vector<int> divisors[];
 extern long long sumOfDivisors[];
+extern bitset<MAX_ALLOCATION_RANGE> compositeStatus;
+extern bitset<MAX_ALLOCATION_RANGE> segmentCompositeStatus;
 
 #define FAST_IO { \
     ios_base::sync_with_stdio(0);\

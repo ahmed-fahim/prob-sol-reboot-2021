@@ -3,11 +3,11 @@
 //
 
 #include "MathLibrary.h"
+using namespace std;
 
 #define pi acos(-1.00)
 #define MOD 10000007
 #define eps 1e-9
-#define MAX_ALLOCATION_RANGE 100005
 
 vector<int> divisors[MAX_ALLOCATION_RANGE];
 long long sumOfDivisors[MAX_ALLOCATION_RANGE];
