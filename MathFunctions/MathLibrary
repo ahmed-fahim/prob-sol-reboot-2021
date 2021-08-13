@@ -36,25 +36,25 @@ vector<long long> &segmentedSieve(long long segmentStart,
 
 void divisorSummatoryFunction(int N);
 
-template<typename T>
+TMP(T)
 T modularAdd(T val, T delta, T mod);
 
-template<typename T>
+TMP(T)
 T modularDelete(T val, T delta, T mod);
 
-template<typename T>
+TMP(T)
 T modularProduct(T val, T delta, T mod);
 
-template<typename T>
+TMP(T)
 T modularDivision(T numerator, T denominator, T mod);
 
-template<typename T>
+TMP(T)
 T moduloInverse(T denominator, T mod);
 
-template<typename T>
+TMP(T)
 T powerMod(T val, T power, T mod);
 
-template<typename T>
+TMP(T)
 T seriesSum(const vector<T>& series);
 //******************************************** Definitions ********************************************//
 
