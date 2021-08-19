@@ -55,7 +55,13 @@ TMP(T)
 T powerMod(T val, T power, T mod);
 
 TMP(T)
-T seriesSum(const vector<T>& series);
+T seriesSum(const vector<T> &series);
+
+TMP(T)
+void primeFactorize(T n, vector<int> &primes, vector<int> &factors);
+
+TMP(T)
+void SievePhi(T N, vector<int> &coprimes);
 //******************************************** Definitions ********************************************//
 
 #define MAX_ALLOCATION_RANGE 100005
@@ -287,10 +293,10 @@ T powerMod(T val, T power, T mod) {
 }
 
 TMP(T)
-T seriesSum(const vector<T>& series) {
+T seriesSum(const vector<T> &series) {
 	if (series.size() <= 2) {
 		T sum = 0;
-		for(const auto& element : series) {
+		for (const auto &element : series) {
 			sum += element;
 		}
 		return sum;
@@ -320,8 +326,8 @@ T seriesSum(const vector<T>& series) {
 	};
 
 	auto sumOfGeometricSeries = [&series]() {
-		auto firstElement = (double)series[0];
-		auto commonRatio = (double)series[1] / (double)series[0];
+		auto firstElement = (double) series[0];
+		auto commonRatio = (double) series[1] / (double) series[0];
 		auto numberOfElements = (double) series.size();
 
 		double numerator;
@@ -337,17 +343,76 @@ T seriesSum(const vector<T>& series) {
 			denominator = 1.00 - commonRatio;
 		}
 
-		return (T)(numerator / denominator);
+		return (T) (numerator / denominator);
 	};
 
-	if(isArithmeticProgression()) {
+	if (isArithmeticProgression()) {
 		return sumOfArithmeticSeries();
-	}
-	else if(isGeometricProgression()) {
+	} else if (isGeometricProgression()) {
 		return sumOfGeometricSeries();
 	}
 	return 0;
 }
 
+TMP(T)
+void primeFactorize(T n, vector<int> &primes, vector<int> &factors) {
+	int sqrtn = sqrt(n);
+	for (auto &prime : primes) {
+		if (prime > sqrtn) {
+			break;
+		}
+		if (n % prime == 0) {
+			while (n % prime == 0) {
+				factors.push_back(prime);
+				n /= prime;
+			}
+			sqrtn = sqrt(n);
+		}
+	}
+	if (n != 1) {
+		//means n must be a prime
+		//if all primes <= sqrt(n) couldn't have factorized it to 1
+		factors.push_back(n);
+		n /= n;
+	}
+}
+
+template<typename T>
+void sievePhi(T N, vector<bool> &primeStatus, vector<int> &coprimes) {
+	primeStatus.clear();
+	coprimes.clear();
+
+	for (int i = 0; i <= N; i++) {
+		coprimes.push_back(i);
+		primeStatus.push_back(true);
+	}
+
+	/**
+	 * 	If a number has a factorization of n = p1^a1 * p2^a2
+	 *  it's number of co-primes = n * (1-(1/p1))*(1-(1/p2))
+	 *  =>	 number of co-primes = n * ((p1-1)/p1) * ((p2-1)/p2)
+	**/
+
+	for (int i = 0; i <= 1; i++) {
+		primeStatus[0] = false;
+	}
+
+	coprimes[2] *= ((2 - 1) / 2);
+
+	for (int value = 4; value <= N; value += 2) {
+		primeStatus[value] = false;
+		coprimes[value] *= ((2 - 1) / 2);
+	}
+
+	for (int value = 3; value <= N; value += 2) {
+		if (primeStatus[value]) {
+			coprimes[value]--;
+			for (int multiple = value * 2; multiple <= N; multiple += value) {
+				primeStatus[value] = false;
+				coprimes[value] = coprimes[value] * ((value - 1) / value);
+			}
+		}
+	}
+}
 
 #endif //MATHFUNCTIONS_MATHLIBRARY_
