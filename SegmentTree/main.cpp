@@ -84,6 +84,7 @@ private:
 	}
 
 	inline void update(int node, int nodeRangeStart, int nodeRangeEnd, int leftIndex, int rightIndex, int value) {
+		handleLazyPropagationOf(node, nodeRangeStart, nodeRangeEnd);
 		if (isNodeRangeOutOfOperatingRange(nodeRangeStart, nodeRangeEnd, leftIndex, rightIndex)) {
 			return;
 		} else if (isNodeRangeFullyInOperatingRange(nodeRangeStart, nodeRangeEnd, leftIndex, rightIndex)) {
@@ -91,7 +92,6 @@ private:
 			handleLazyPropagationOf(node, nodeRangeStart, nodeRangeEnd);
 			return;
 		}
-		handleLazyPropagationOf(node, nodeRangeStart, nodeRangeEnd);
 		int leftChild = getLeftChild(node);
 		int rightChild = getRightChild(node);
 		int nodeRangeMid = midOfRange(nodeRangeStart, nodeRangeEnd);

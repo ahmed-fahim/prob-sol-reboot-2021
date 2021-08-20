@@ -1,0 +1,152 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define MAX_ITEM 1000006
+#define MAX_EXTENDED_ARRAY_SIZE 2*MAX_ITEM
+#define INF INT_MAX
+
+
+int cumulativeSum[MAX_EXTENDED_ARRAY_SIZE];
+int tree[4 * MAX_EXTENDED_ARRAY_SIZE];
+int lazy[4 * MAX_EXTENDED_ARRAY_SIZE];
+
+int leftNode(int node) {
+	return 2 * node;
+}
+
+int rightNode(int node) {
+	return 2 * node + 1;
+}
+
+int midSegment(int left, int right) {
+	return (left + right) / 2;
+}
+
+void build(int node, int left, int right) {
+	if (left == right) {
+		tree[node] = cumulativeSum[left];
+		return;
+	}
+
+	int mid = midSegment(left, right);
+	int leftChild = leftNode(node);
+	int rightChild = rightNode(node);
+
+	build(leftChild, left, mid);
+	build(rightChild, mid + 1, right);
+	tree[node] = min(tree[leftChild], tree[rightChild]);
+}
+
+void handleLazy(int node, int left, int right) {
+	if (lazy[node] != 0) {
+		tree[node] += lazy[node];
+		if (left != right) {
+			lazy[leftNode(node)] += lazy[node];
+			lazy[rightNode(node)] += lazy[node];
+		}
+		lazy[node] = 0;
+	}
+}
+
+int query(int node, int left, int right, int ql, int qr) {
+	handleLazy(node, left, right);
+	if (qr < left || right < ql) {
+		return INF;
+	}
+
+	if (ql <= left && right <= qr) {
+		return tree[node];
+	}
+	int mid = midSegment(left, right);
+	int leftChild = leftNode(node);
+	int rightChild = rightNode(node);
+
+	int leftResult = query(leftChild, left, mid, ql, qr);
+	int rightResult = query(rightChild, mid + 1, right, ql, qr);
+
+	return min(leftResult, rightResult);
+}
+
+void update(int node, int left, int right, int ql, int qr, int value) {
+	if (qr < left || right < ql) {
+		return;
+	}
+
+	if (ql <= left && right <= qr) {
+		lazy[node] += value;
+		handleLazy(node, left, right);
+		return;
+	}
+
+	handleLazy(node, left, right);
+	int mid = midSegment(left, right);
+	int leftChild = leftNode(node);
+	int rightChild = rightNode(node);
+
+	update(leftChild, left, mid, ql, qr, value);
+	update(rightChild, mid + 1, right, ql, qr, value);
+	tree[node] = min(tree[leftChild], tree[rightChild]);
+}
+
+
+void printLeafNodes(int node, int left, int right) {
+	if(left == right) {
+		cout << left <<": " << tree[node] << endl;
+		return;
+	}
+	int mid = midSegment(left, right);
+	int leftChild = leftNode(node);
+	int rightChild = rightNode(node);
+	printLeafNodes(leftChild, left, mid);
+	printLeafNodes(rightChild, mid + 1, right);
+}
+
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cerr.tie(0);
+	cout.tie(0);
+
+	int n;
+	while (cin >> n) {
+		if(n == 0) {
+			break;
+		}
+
+		memset(cumulativeSum, 0, sizeof(cumulativeSum));
+		memset(tree, 0, sizeof(tree));
+		memset(lazy, 0, sizeof(lazy));
+
+		cin >> cumulativeSum[1];
+		for(int index = 2; index <= n; index++) {
+			cin >> cumulativeSum[index];
+			cumulativeSum[index] += cumulativeSum[index-1]; //cumulative sum
+		}
+
+		for(int extensionIndex = n+1; extensionIndex <= 2*n; extensionIndex++) {
+			cumulativeSum[extensionIndex] = cumulativeSum[extensionIndex-1];
+		}
+
+		build(1, 1, 2*n);
+
+		int count = 0;
+		for(int i = 1; i <= n; i++) {
+			int startIndex = i;
+			int endIndex = startIndex + n - 1;
+
+			int minimumCumSum = query(1, 1, 2*n, startIndex, endIndex);
+
+			printLeafNodes(1, 1, 2*n);
+			cout << endl;
+
+			if(minimumCumSum >= 0) count++;
+
+			int diff = cumulativeSum[startIndex] - cumulativeSum[startIndex-1];
+			update(1, 1, 2*n, startIndex, 2*n, -diff);
+			update(1, 1, 2*n, startIndex + n, 2*n, diff);
+		}
+
+		cout << count << endl;
+	}
+}
